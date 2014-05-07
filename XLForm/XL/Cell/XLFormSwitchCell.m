@@ -46,10 +46,9 @@
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
     self.switchControl.on = [self.rowDescriptor.value boolValue];
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-    self.textLabel.font = [UIFont fontWithDescriptor:fontBoldDesc size:0.0f];
+    self.textLabel.font = [UIFont fontWithDescriptor:fontDesc size:0.0f];
 }
 
 - (UISwitch *)switchControl

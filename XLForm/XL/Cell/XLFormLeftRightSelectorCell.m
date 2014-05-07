@@ -144,11 +144,10 @@
     [self.leftButton setEnabled:(!self.rowDescriptor.disabled)];
     self.accessoryView = self.rowDescriptor.disabled ? nil : [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"XLForm.bundle/forwardarrow.png"]];
     self.selectionStyle = self.rowDescriptor.disabled ? UITableViewCellSelectionStyleNone : UITableViewCellSelectionStyleDefault;
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
     
-    self.leftButton.titleLabel.font = [UIFont fontWithDescriptor:fontBoldDesc size:0];
+    self.leftButton.titleLabel.font = [UIFont fontWithDescriptor:fontDesc size:0];
     self.rightLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
 }
 

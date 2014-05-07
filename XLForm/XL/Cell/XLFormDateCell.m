@@ -108,10 +108,9 @@
     
     self.textLabel.text = [NSString stringWithFormat:@"%@%@", self.rowDescriptor.title, self.rowDescriptor.required ? @"*" : @""];
     self.detailTextLabel.text = [self valueDisplayText];
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-    self.textLabel.font = [UIFont fontWithDescriptor:fontBoldDesc size:0];
+    self.textLabel.font = [UIFont fontWithDescriptor:fontDesc size:0.0f];
     self.detailTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
     
 }

@@ -142,11 +142,10 @@
     [self.textField setEnabled:!self.rowDescriptor.disabled];
     self.textLabel.textColor  = self.rowDescriptor.disabled ? [UIColor grayColor] : [UIColor blackColor];
     self.textField.textColor = self.rowDescriptor.disabled ? [UIColor grayColor] : [UIColor blackColor];
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
 
-    self.textLabel.font = [UIFont fontWithDescriptor:fontBoldDesc size:0];
+    self.textLabel.font = [UIFont fontWithDescriptor:fontDesc size:0];
     self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
 }
 

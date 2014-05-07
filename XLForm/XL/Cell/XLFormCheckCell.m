@@ -42,10 +42,9 @@
     [super update];
     self.textLabel.text = self.rowDescriptor.title;
     self.accessoryType = [self.rowDescriptor.value boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-    self.textLabel.font = [UIFont fontWithDescriptor:fontBoldDesc size:0.0f];
+    self.textLabel.font = [UIFont fontWithDescriptor:fontDesc size:0.0f];
 }
 
 -(void)formDescriptorCellDidSelectedWithFormController:(XLFormViewController *)controller

@@ -83,10 +83,9 @@ NSString *const kFormTextViewCellPlaceholder = @"placeholder";
 {
     if (_label) return _label;
     _label = [UILabel autolayoutView];
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-    [_label setFont:[UIFont fontWithDescriptor:fontBoldDesc size:0.0f]];
+    [_label setFont:[UIFont fontWithDescriptor:fontDesc size:0.0f]];
     [_label setContentHuggingPriority:500 forAxis:UILayoutConstraintAxisHorizontal];
     return _label;
 }
@@ -111,10 +110,9 @@ NSString *const kFormTextViewCellPlaceholder = @"placeholder";
 {
     [super update];
     self.textView.delegate = self;
-    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    UIFont * labelFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
-    UIFontDescriptor * fontBoldDesc = [fontDesc fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
-    self.label.font = [UIFont fontWithDescriptor:fontBoldDesc size:0.0f];
+    self.label.font = [UIFont fontWithDescriptor:fontDesc size:0.0f];
     self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
     self.textView.keyboardType = UIKeyboardTypeAlphabet;
     self.textView.text = self.rowDescriptor.value;
