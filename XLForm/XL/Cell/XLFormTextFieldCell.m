@@ -146,7 +146,7 @@
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
 
     self.textLabel.font = [UIFont fontWithDescriptor:fontDesc size:0];
-    self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
 -(BOOL)formDescriptorCellBecomeFirstResponder

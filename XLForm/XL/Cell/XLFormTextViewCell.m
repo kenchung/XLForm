@@ -94,7 +94,7 @@ NSString *const kFormTextViewCellPlaceholder = @"placeholder";
 {
     if (_textView) return _textView;
     _textView = [XLFormTextView autolayoutView];
-    _textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    _textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     return _textView;
 }
 

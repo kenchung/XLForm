@@ -148,7 +148,7 @@
     UIFontDescriptor * fontDesc = [labelFont fontDescriptor];
     
     self.leftButton.titleLabel.font = [UIFont fontWithDescriptor:fontDesc size:0];
-    self.rightLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    self.rightLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
 
